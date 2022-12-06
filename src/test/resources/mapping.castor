@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN" "http://castor.codehaus.org/mapping.dtd">
+<mapping>
+
+  <class name="com.ottogroup.buying.fixture.ImportData">
+    <map-to xml="ImportData" />
+    <field name="metaData">
+      <bind-xml name="MetaData" node="element" />
+    </field>
+    <field name="itemData">
+      <bind-xml name="ItemData" node="element" />
+    </field>
+  </class>
+  
+  <class name="com.ottogroup.buying.fixture.MetaData">
+    <field name="userLanguage" type="string">
+      <bind-xml name="userLanguage" node="attribute" />
+    </field>
+    <field name="qualityLevelCode" type="int">
+      <bind-xml name="qualityLevelCode" node="attribute" />
+    </field>
+  </class>
+  
+  <class name="com.ottogroup.buying.fixture.ItemDataWrapper">
+	<map-to xml="ItemData"/>
+	<field name="items" type="com.ottogroup.buying.fixture.Item" collection="arraylist" set-method="add" get-method="iterateItems">
+		<bind-xml name="Item" node="element"/>
+	</field>
+  </class>
+  
+  <class name="com.ottogroup.buying.fixture.Item">
+    <map-to xml="Item" />
+    <field name="itemNumber">
+      <bind-xml name="ItemNumber" node="element" />
+    </field>
+  </class>
+  
+</mapping>
