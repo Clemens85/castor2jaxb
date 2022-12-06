@@ -1,6 +1,6 @@
 Code for automatically migrating existing Java classes that were bound to XML by [Castor XML bindings](https://castor.exolab.org/) to JAXB annotations.
 
-More details can be found in this [article](XXX).
+More details can be found here [https://medium.com/@clemensstich/migrating-castor-xml-to-jaxb-a18929ae5987](https://medium.com/@clemensstich/migrating-castor-xml-to-jaxb-a18929ae5987).
 
 tl;dr: Just copy the main code from com.ottogroup.buying.castor2jaxb into your project and execute the CastorToJaxbMigrator (ensure that the needed dependencies are also setup in the project -> pom.xml)
 
